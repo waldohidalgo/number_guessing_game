@@ -27,9 +27,9 @@ GUESS_NUMBER() {
             NUMBER_OF_GUESSES=$((NUMBER_OF_GUESSES + 1))
         done
     done
-    echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
-
     INSERT_GAME=$($PSQL "INSERT INTO games(user_id, games_played, number_guess) VALUES((SELECT user_id FROM users WHERE username='$USERNAME'), $NUMBER_OF_GUESSES, $SECRET_NUMBER)")
+    
+    echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"    
 }
 
 SECRET_NUMBER=$((1 + $RANDOM % 1000))
