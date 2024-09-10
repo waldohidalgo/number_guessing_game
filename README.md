@@ -8,6 +8,10 @@ Repositorio con el código solución al [proyecto quinto y último requisito obl
 
 ![All Tests Passed Screenshot](./screenshots/all_tests_passed.png)
 
+## Proyecto Aprobado
+
+![Proyecto Aprobado Screenshot](./screenshots/passed.webp)
+
 ## Comandos SQL
 
 ```sql
