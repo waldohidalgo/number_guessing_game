@@ -1,8 +1,15 @@
 # Build a Number Guessing Game
 
-Repositorio con el código solución al [proyecto quinto y último requisito obligatorio](https://www.freecodecamp.org/learn/relational-database/build-a-number-guessing-game-project/build-a-number-guessing-game) para obtener la [Relational Database Certification](https://www.freecodecamp.org/learn/relational-database) de freecodecamp
+Repositorio con el código solución al [proyecto quinto y último](https://www.freecodecamp.org/learn/relational-database/build-a-number-guessing-game-project/build-a-number-guessing-game) el cual es requisito obligatorio para obtener la [Relational Database Certification](https://www.freecodecamp.org/learn/relational-database) de freecodecamp
 
 ## Tabla de Contenidos
+
+- [Build a Number Guessing Game](#build-a-number-guessing-game)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Instrucciones y All Tests Passed](#instrucciones-y-all-tests-passed)
+  - [Proyecto Aprobado](#proyecto-aprobado)
+  - [Comandos SQL](#comandos-sql)
+  - [Bash Script](#bash-script)
 
 ## Instrucciones y All Tests Passed
 
