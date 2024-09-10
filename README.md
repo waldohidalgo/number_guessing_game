@@ -1,3 +1,26 @@
+# Build a Number Guessing Game
+
+Repositorio con el código solución al [proyecto quinto y último requisito obligatorio](https://www.freecodecamp.org/learn/relational-database/build-a-number-guessing-game-project/build-a-number-guessing-game) para obtener la [Relational Database Certification](https://www.freecodecamp.org/learn/relational-database) de freecodecamp
+
+## Tabla de Contenidos
+
+## Instrucciones y All Tests Passed
+
+![All Tests Passed Screenshot](./screenshots/all_tests_passed.png)
+
+## Comandos SQL
+
+```sql
+CREATE DATABASE number_guess;
+
+CREATE TABLE users(user_id SERIAL PRIMARY KEY, username VARCHAR(22) NOT NULL);
+
+CREATE TABLE games(game_id SERIAL PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(user_id), number_guess INTEGER NOT NULL, games_played INTEGER NOT NULL DEFAULT 0);
+```
+
+## Bash Script
+
+```bash
 #!/bin/bash
 
 PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
@@ -28,8 +51,8 @@ GUESS_NUMBER() {
         done
     done
     INSERT_GAME=$($PSQL "INSERT INTO games(user_id, games_played, number_guess) VALUES((SELECT user_id FROM users WHERE username='$USERNAME'), $NUMBER_OF_GUESSES, $SECRET_NUMBER)")
-    
-    echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"    
+
+    echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
 }
 
 SECRET_NUMBER=$((1 + $RANDOM % 1000))
@@ -53,3 +76,5 @@ else
     fi
     GUESS_NUMBER $USERNAME
 fi
+
+```
